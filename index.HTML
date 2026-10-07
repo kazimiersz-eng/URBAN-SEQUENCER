@@ -259,5 +259,4 @@ $("scale").onchange=e=>{
   state.scale=next;
   SYNTHS.forEach(t=>state.notes[t.id]=[]);
   renderSynth();
-};$("scale").onchange=e=>{state.scale=e.target.value;SYNTHS.forEach(t=>state.notes[t.id]=[]);renderSynth()};document.addEventListener("keydown",e=>{if(["INPUT","SELECT","BUTTON","SUMMARY"].includes(document.activeElement.tagName))return;if(e.code==="Space"){e.preventDefault();state.playing?stop():play()}if(e.code==="Escape")stop()});window.addEventListener("blur",()=>drag=null);window.addEventListener("beforeunload",silence);configureRecordingSupport();sync();render();
-})();</script></body></html>
+};</script></body></html>
