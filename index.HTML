@@ -259,4 +259,5 @@ $("scale").onchange=e=>{
   state.scale=next;
   SYNTHS.forEach(t=>state.notes[t.id]=[]);
   renderSynth();
+};document.addEventListener("keydown",e=>{if(e.code==="Escape"&&!["INPUT","SELECT"].includes(document.activeElement.tagName)){stop();return}if(["INPUT","SELECT","BUTTON","SUMMARY"].includes(document.activeElement.tagName))return;if(e.code==="Space"){e.preventDefault();state.playing?stop():play()}});window.addEventListener("blur",()=>drag=null);window.addEventListener("beforeunload",silence);configureRecordingSupport();sync();render();
 })();</script></body></html>
